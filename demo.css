@@ -1,0 +1,18 @@
+/* PC */
+@Media (min-width: 1024px) {
+    .pc {
+        display: block;
+    }
+}
+/* Tablet */
+@Media (min-width: 740px) and (max-width: 1023px) {
+    .tablet {
+        display: block;
+    }
+}
+/* Mobile */
+@Media (max-width: 740px) {
+    .mobile {
+        display: block;
+    }
+}
