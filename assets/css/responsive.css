@@ -7,7 +7,7 @@
     
 }
 /* Mobile */
-@Media (max-width: 740px) {
+@Media (max-width: 739px) {
     #nav {
         display: block;
     }

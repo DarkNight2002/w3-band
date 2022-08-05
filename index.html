@@ -90,7 +90,7 @@
                                 <h4 class="place-heading">New York</h4>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn text-white">Buy Tickets</button>
+                                <button class="place-buy-btn text-white js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="grid__product-2-3 member-item">
@@ -99,7 +99,7 @@
                                 <h4 class="place-heading">Paris</h4>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn text-white">Buy Tickets</button>
+                                <button class="place-buy-btn text-white js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="grid__product-2-3 member-item">
@@ -108,7 +108,7 @@
                                 <h4 class="place-heading">San Francisco</h4>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn text-white">Buy Tickets</button>
+                                <button class="place-buy-btn text-white js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -150,6 +150,34 @@
             </div> 
             <p class="footer-note">Powered by <a href="#">w3.css</a></p>
         </div>
+        <!-- js-open -->
+        <div class="tickets">
+            <div class="tickets-pay js-tickets-pay">
+                    <i class="fa-solid fa-xmark close-tickets text-white js-close"></i>
+                    <div class="tickets-header text-white">
+                        <i class="ti-bag"></i>
+                        Tickets
+                    </div>
+                    <div class="tickets-input">
+                        <p><i class="ti-shopping-cart"></i> Tickets, $15 per person</p>
+                        <input type="text" placeholder="How many?">
+                        <p><i class="fa-solid fa-user"></i> Send To</p>
+                        <input type="text" placeholder="Enter email?">
+                        <button class="btn text-white">PAY
+                            <i class="ti-check"></i>
+                        </button>
+                    </div>
+                    <div class="tickets-footer">
+                        <button class="tickets-close text-white js-close">Close 
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <p class="tickets-note">
+                            Need
+                            <a href="#">help?</a>
+                        </p>
+                    </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -181,6 +209,32 @@
                 }
             }
         }
+    </script>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket');
+        const tickets = document.querySelector('.tickets');
+        const ticket = document.querySelector('.js-tickets-pay');
+        const ticketsClose = document.querySelectorAll('.js-close');
+        ticket.onclick = function (e){
+            e.stopPropagation();
+        }
+        function showBuyTickets() { 
+            tickets.classList.add('js-open');
+        }
+        function hideBuyTickets() { 
+            tickets.classList.remove('js-open');
+        }
+
+        tickets.addEventListener('click', hideBuyTickets );
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click',showBuyTickets );
+        }
+        for (const ticketClose of ticketsClose) {
+            ticketClose.addEventListener('click',hideBuyTickets );
+        }
+        
     </script>
 </body>
 </html>

@@ -122,7 +122,7 @@ html {
 #slider {
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/w3_band/assets/img/slider1.jpg') top center / cover no-repeat;
+    background: url('../img/slider1.jpg') top center / cover no-repeat;
     position: relative;
 }
 
@@ -367,4 +367,100 @@ html {
 
 .footer-note a {
     color: rgba(0, 0, 0, 0.5);
+}
+
+/* Tickets */
+.js-open {
+    display: flex !important;
+}
+.tickets {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+.tickets-pay {
+    width: 900px;
+    max-width: 100%;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    animation: move ease-out 0.4s;
+}
+
+.tickets-header {
+    font-size: 30px;
+    text-align: center;
+    padding: 47px 0;
+    background-color: #009688!important;
+    letter-spacing: 4px;
+}
+
+.tickets-pay .close-tickets {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    padding: 16px;
+}
+.tickets-pay .close-tickets:hover {
+    background-color: #ccc;
+    color: #000 !important;
+    cursor: pointer;
+}
+
+.tickets-input {
+    padding: 0 16px;
+}
+
+.tickets-input p {
+    margin: 16px 0;
+    font-size: 15px;
+}
+
+.tickets-input input {
+    padding: 11px 8px;
+    width: 100%;
+}
+
+.tickets-input .btn {
+    font-weight: 600;
+    margin: 16px 0;
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    font-size: 15px;
+    background-color: #009688!important;
+}
+.tickets-close:hover,
+.tickets-input .btn:hover {
+    color: #000 !important;
+    cursor: pointer;
+    background-color: #ccc!important;
+}
+
+.tickets-footer {
+    margin: 16px 0;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tickets-close {
+    padding: 10px 16px;
+    background-color: #f44336;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+}
+
+.tickets-note {
+    font-size: 15px;
+}
+.tickets-note a{
+    color: #2196F3;
 }
